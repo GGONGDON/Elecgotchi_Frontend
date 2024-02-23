@@ -53,7 +53,7 @@ class LoginPage extends StatelessWidget{
                   const SizedBox(height: 30,),
                   // login button
                   WideBlackButton(
-                      onTap: () => Navigator.pushNamed(context, '/app_page.dart' ),
+                      onTap: () => Navigator.pushNamed(context, '/1_home_page.dart' ),
                       text: 'Log in'
                   ),
 
