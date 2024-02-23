@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_flutter_project/components/bottom_nav_bar.dart';
 import 'package:my_first_flutter_project/components/product_tile_L.dart';
 import 'package:my_first_flutter_project/models/display.dart';
 import 'package:provider/provider.dart';
@@ -64,10 +63,6 @@ class HomePage extends StatelessWidget{
           ],
         ),
       ),
-
-      // 하단바
-      bottomNavigationBar: BottomNav(),
-
     );
   }
 }
