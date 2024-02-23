@@ -5,6 +5,7 @@ import 'package:my_first_flutter_project/screens/1_home_page.dart';
 import 'package:my_first_flutter_project/screens/2_add_page.dart';
 
 // 기본 홈
+// 하단바가 있는 페이지
 class AppPage extends StatefulWidget {
   const AppPage({super.key});
 
@@ -31,14 +32,6 @@ class AppState extends State<AppPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // 상단바
-      appBar: AppBar(
-        backgroundColor: Color(0xFFF5F5F5),
-        leading: Container(
-          padding: EdgeInsets.all(10),
-          child: Image.asset('assets/images/Logo_vectorized_NoBackground.png'),
-        ),
-      ),
 
       body: _navIndex.elementAt(_selectedIndex),
 
@@ -60,7 +53,7 @@ class AppState extends State<AppPage> {
             Icons.home,
             color: Colors.white,),
           Icon(
-            Icons.add,
+            Icons.add_circle_outlined,
             color: Colors.white,),
         ],
       ),

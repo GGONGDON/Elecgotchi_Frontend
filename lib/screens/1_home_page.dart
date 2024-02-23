@@ -16,9 +16,18 @@ class HomePage extends StatelessWidget{
       // 전체화면 색상
       backgroundColor: Color(0xFFF5F5F5),
 
+        // 상단바
+        appBar: AppBar(
+          backgroundColor: Color(0xFFF5F5F5),
+          leading: Container(
+            padding: EdgeInsets.all(10),
+            child: Image.asset('assets/images/Logo_vectorized_NoBackground.png'),
+          ),
+        ),
+
       body: ListView(
         children: [
-          // title
+          // title: Elecgotchi
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
