@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
-import 'package:my_first_flutter_project/screens/0_archive_page.dart';
-import 'package:my_first_flutter_project/screens/1_home_page.dart';
-import 'package:my_first_flutter_project/screens/2_add_page.dart';
 
 class FloatButton extends StatelessWidget{
   const FloatButton({super.key});
@@ -21,22 +18,16 @@ class FloatButton extends StatelessWidget{
 
         children: [
           SpeedDialChild(
-              child: Icon(Icons.archive, color: Colors.black),
+              child: Icon(Icons.delete, color: Colors.black),
               shape: CircleBorder(),
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => ArchivePage()));
+                //Navigator.push(context, MaterialPageRoute(builder: (context) => ArchivePage()));
               }),
           SpeedDialChild(
-              child: Icon(Icons.home, color: Colors.black),
+              child: Icon(Icons.archive_outlined, color: Colors.black),
               shape: CircleBorder(),
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
-              }),
-          SpeedDialChild(
-              child: Icon(Icons.add_circle_outlined, color: Colors.black),
-              shape: CircleBorder(),
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => AddPage()));
+                //Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
               }),
           SpeedDialChild(
               child: Icon(Icons.arrow_back, color: Colors.black),
