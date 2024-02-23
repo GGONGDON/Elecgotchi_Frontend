@@ -1,35 +1,48 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
-class MyNavBar extends StatelessWidget{
-  const MyNavBar({super.key});
+class BottomNav extends StatefulWidget {
+  const BottomNav({super.key});
 
   @override
-  Widget build(BuildContext context){
-    return Scaffold(
-      bottomNavigationBar: CurvedNavigationBar(
-        color: Colors.black.withOpacity(0.800000011920929),
-        backgroundColor: Color(0xFFF5F5F5),
-        buttonBackgroundColor: Colors.blue,
+  State<BottomNav> createState() => NavState();
+}
 
-        onTap: (index){
-          print (index);
-        },
+class NavState extends State<BottomNav> {
+  GlobalKey<CurvedNavigationBarState>_curvednavigationkey=GlobalKey();
+  int _intpage = 1;
 
-        items: [
-          Icon(
-              Icons.archive,
-            color: Colors.white,
-          ),
-          Icon(
-              Icons.home,
+
+  @override
+  Widget build(BuildContext context) {
+
+    return CurvedNavigationBar(
+      key: _curvednavigationkey,
+      color: Colors.black.withOpacity(0.8),
+      backgroundColor: Colors.transparent,
+      buttonBackgroundColor: Colors.blue,
+      animationCurve: Curves.easeInOut,
+      animationDuration: Duration(milliseconds: 600),
+      index: _intpage, // !
+      items: [
+        Icon(
+          Icons.archive,
+          color: Colors.white,
+        ),
+        Icon(
+          Icons.home,
           color: Colors.white,),
-          Icon(
-              Icons.add,
+        Icon(
+          Icons.add_circle_outlined,
           color: Colors.white,),
-        ],
-      ),
-
+      ],
+      onTap: (index){
+        setState(() {
+          _intpage = index;
+        });
+      },
+      letIndexChange: (index)=>true,
     );
   }
 }
