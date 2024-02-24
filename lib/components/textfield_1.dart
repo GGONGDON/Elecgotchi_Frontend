@@ -16,7 +16,7 @@ class TextField_Log_Button extends StatelessWidget{
   Widget build(BuildContext context){
     return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25.0),
-      child: Container(
+      child: SizedBox(
         width: 300,
         height: 50,
         child: TextField(
@@ -26,7 +26,7 @@ class TextField_Log_Button extends StatelessWidget{
             enabledBorder: const OutlineInputBorder(
               borderSide: BorderSide(color: Colors.black),
             ),
-            focusedBorder: OutlineInputBorder(
+            focusedBorder: const OutlineInputBorder(
               borderSide: BorderSide(color: Colors.black),
             ),
             fillColor: Colors.white,

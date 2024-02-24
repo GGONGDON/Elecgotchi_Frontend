@@ -19,9 +19,9 @@ class MyAppState extends State<MyAppPage> {
   int _selectedIndex = 1;
 
   final List<Widget> _navIndex = [
-    ArchivePage(),
-    HomePage(),
-    AddPage(),
+    const ArchivePage(),
+    const HomePage(),
+    const AddPage(),
   ];
 
   void _onNavTapped(int index) {
@@ -37,12 +37,12 @@ class MyAppState extends State<MyAppPage> {
       bottomNavigationBar: CurvedNavigationBar(
         index: _selectedIndex,
         color: Colors.black.withOpacity(0.8),
-        backgroundColor: Color(0xFFF5F5F5),
+        backgroundColor: const Color(0xFFF5F5F5),
         buttonBackgroundColor: Colors.blue,
 
         onTap: _onNavTapped,
 
-        items: [
+        items: const [
           Icon(
             Icons.archive,
             color: Colors.white,

@@ -15,7 +15,7 @@ class GoogleButton extends StatelessWidget{
               style: TextButton.styleFrom(
                 foregroundColor: Colors.white,
                 shape: RoundedRectangleBorder(
-                  side: BorderSide(width: 1.50),
+                  side: const BorderSide(width: 1.50),
                   borderRadius: BorderRadius.circular(6),
                 ),
               ),
@@ -34,9 +34,9 @@ class GoogleButton extends StatelessWidget{
                       fit: BoxFit.cover
                     ),
                   ), // Google 아이콘 이미지
-                  SizedBox(width: 20,), // 아이콘과 텍스트 사이의 간격
-                  Center(
-                    child: const Text(
+                  const SizedBox(width: 20,), // 아이콘과 텍스트 사이의 간격
+                  const Center(
+                    child: Text(
                       'Continue with Google',
                       style: TextStyle(
                         color: Colors.black,

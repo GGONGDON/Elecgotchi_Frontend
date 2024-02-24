@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_flutter_project/components/product_tile_L.dart';
+import 'package:my_first_flutter_project/components/product_tile.dart';
 import 'package:my_first_flutter_project/models/display.dart';
+import 'package:my_first_flutter_project/screens/info_use_page.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget{
-  HomePage({super.key});
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context){
@@ -12,26 +13,34 @@ class HomePage extends StatelessWidget{
     // access in use products
     final products = context.watch<Display>().use;
 
+    // navigate to selected product details page
+    void navigateToProductDetails(int index){
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => InfoUsePage(
+            product: products[index],
+          ),
+          ),
+      );
+    }
+
     return Scaffold(
       // 전체화면 색상
-      backgroundColor: Color(0xFFF5F5F5),
+      backgroundColor: const Color(0xFFF5F5F5),
 
         // 상단바
         appBar: AppBar(
-          backgroundColor: Color(0xFFF5F5F5),
+          backgroundColor: const Color(0xFFF5F5F5),
           leading: Container(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             child: Image.asset('assets/images/Logo_vectorized_NoBackground.png'),
           ),
         ),
 
-      body: Container(
-        height: 600,
-        child: ListView(
+      body: ListView(
           children: [
             // title: Elecgotchi
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
               child: Text(
                 'Elecgotchi',
                 style: TextStyle(
@@ -50,19 +59,16 @@ class HomePage extends StatelessWidget{
                   itemCount: products.length,
                   scrollDirection: Axis.horizontal,
                   padding: const EdgeInsets.all(15),
-                  itemBuilder: (context, index){
-                    // get each individual product_use
-                    final product = products[index];
-
-                    // return as a product tile UI
-                    return ProductTile_L(product: product);
-                  },
+                  itemBuilder: (context, index) => ProductTile(
+                      product: products[index],
+                      onTap: () => navigateToProductDetails(index),
+                      width: 300,
+                  ),
                 ),
               ),
             ),
           ],
         ),
-      ),
-    );
+      );
   }
 }

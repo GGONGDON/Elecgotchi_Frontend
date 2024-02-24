@@ -4,7 +4,6 @@ import 'package:my_first_flutter_project/models/display.dart';
 import 'package:my_first_flutter_project/screens/0_archive_page.dart';
 import 'package:my_first_flutter_project/screens/1_home_page.dart';
 import 'package:my_first_flutter_project/screens/2_add_page.dart';
-import 'package:my_first_flutter_project/screens/info_use_page.dart';
 import 'package:provider/provider.dart';
 import 'screens/login_page.dart';
 
@@ -27,11 +26,10 @@ class MyApp extends StatelessWidget{
       home: LoginPage(),
       routes: {
         '/login_page.dart': (context) => LoginPage(),
-        '/app_main_page.dart': (context) => MyAppPage(),
-        '/1_home_page.dart': (context) => HomePage(),
-        '/2_add_page.dart': (context) => AddPage(),
-        '/0_archive_page.dart': (context) => ArchivePage(),
-        'info_use_page.dart': (context) => InfoUsePage(),
+        '/app_main_page.dart': (context) => const MyAppPage(),
+        '/1_home_page.dart': (context) => const HomePage(),
+        '/2_add_page.dart': (context) => const AddPage(),
+        '/0_archive_page.dart': (context) => const ArchivePage(),
       },
     );
   }

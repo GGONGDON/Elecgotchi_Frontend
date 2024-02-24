@@ -31,7 +31,7 @@ class WideBlackButton extends StatelessWidget{
                     child: Center(
                       child: Text(
                         text,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 16,
                           fontFamily: 'Inter',

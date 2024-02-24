@@ -38,7 +38,7 @@ class Display extends ChangeNotifier {
   ];
 
   // products in archive
-  List<Product> _archive = [];
+  final List<Product> _archive = [];
 
   // get list of product in use
   List<Product> get use => _use;

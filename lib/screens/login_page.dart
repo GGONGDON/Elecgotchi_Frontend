@@ -25,7 +25,7 @@ class LoginPage extends StatelessWidget{
 
                   const SizedBox(height: 30,),
                   // Sign in to Elecgotchi
-                  Text(
+                  const Text(
                     'Sign in to Elecgotchi',
                     style: TextStyle(
                       color: Colors.black,
@@ -88,7 +88,7 @@ class LoginPage extends StatelessWidget{
 
                   const SizedBox(height: 30,),
                   // continue with google
-                  GoogleButton(),
+                  const GoogleButton(),
 
                   const SizedBox(height: 30,),
                   // No acount? Create one
@@ -109,7 +109,7 @@ class LoginPage extends StatelessWidget{
                         onPressed: () {
                           // 버튼이 눌렸을 때 수행할 작업을 이곳에 작성하세요.
                         },
-                        child: Text('Create one',
+                        child: const Text('Create one',
                           style: TextStyle(
                             color: Colors.blue,
                             fontSize: 16,
