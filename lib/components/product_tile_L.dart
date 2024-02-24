@@ -4,25 +4,29 @@ import 'package:my_first_flutter_project/models/product.dart';
 class ProductTile_L extends StatelessWidget{
 
   final Product product;
+  final double width;
 
-  const ProductTile_L({
+  ProductTile_L({
     super.key,
     required this.product,
+    this.width = 300.0,
   });
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return
+      InkWell(
       onTap: () => Navigator.pushNamed(context, 'info_use_page.dart' ),
 
         child: Container(
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(width/25),
           ),
-          margin: const EdgeInsets.all(10),
-          padding: const EdgeInsets.all(25),
-          width: 300,
+          margin: EdgeInsets.all(width/30),
+          padding: EdgeInsets.all(width/12),
+          width: width,
+          height: width * 3/2,
           child: Column(
             children: [
               // product image
@@ -31,24 +35,21 @@ class ProductTile_L extends StatelessWidget{
                 child: Container(
                   decoration: BoxDecoration(
                       color: Colors.blue,
-                      borderRadius: BorderRadius.circular(12)
+                      borderRadius: BorderRadius.circular(width/25)
                   ),
-
-                  width: double.infinity,
-                  padding: EdgeInsets.all(25),
+                  padding: EdgeInsets.all(width/12),
                   child: Icon(Icons.favorite),
                 ),
-
               ),
 
-              const SizedBox(height: 15,),
+              SizedBox(height: width/20,),
 
               // product name
               Text(
                 product.name,
                 style: TextStyle(
                   color: Colors.black,
-                  fontSize: 20,
+                  fontSize: width/15,
                   fontWeight: FontWeight.w700,
                 ),
               ),
