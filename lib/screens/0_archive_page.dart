@@ -11,7 +11,7 @@ class ArchivePage extends StatefulWidget {
 class ArchiveState extends State<ArchivePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       // 전체화면 색상
       backgroundColor: Color(0xFFF5F5F5),
 
@@ -20,7 +20,7 @@ class ArchiveState extends State<ArchivePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(8.0),
               child: Text(
                 'Archive',
                 style: TextStyle(

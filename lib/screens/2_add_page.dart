@@ -1,7 +1,4 @@
-import 'dart:ui';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 // 2.1 제품 등록 페이지
 class AddPage extends StatefulWidget {
@@ -18,14 +15,14 @@ class AddState extends State<AddPage> {
 
     return Scaffold(
       // 전체화면 색상
-      backgroundColor: Color(0xFFF5F5F5),
+      backgroundColor: const Color(0xFFF5F5F5),
 
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
               child: Text(
                 'Add Your Product',
                 style: TextStyle(
@@ -38,7 +35,7 @@ class AddState extends State<AddPage> {
             /**
              * URL 입력란
              */
-            SizedBox(height: 10.0,),
+            const SizedBox(height: 10.0,),
             Container(
               padding: const EdgeInsets.all(16.0),
               width: screenWidth,

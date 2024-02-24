@@ -8,7 +8,7 @@ class FloatButton extends StatelessWidget{
   Widget build(BuildContext context){
     return SpeedDial(
         animatedIcon: AnimatedIcons.menu_close,
-        animatedIconTheme: IconThemeData(color: Colors.white),
+        animatedIconTheme: const IconThemeData(color: Colors.white),
         backgroundColor: Colors.black,
 
         overlayColor: Colors.black,
@@ -18,23 +18,38 @@ class FloatButton extends StatelessWidget{
 
         children: [
           SpeedDialChild(
-              child: Icon(Icons.delete, color: Colors.black),
-              shape: CircleBorder(),
+              child: const Icon(Icons.delete_forever, color: Colors.black),
+              shape: const CircleBorder(),
               onTap: () {
                 //Navigator.push(context, MaterialPageRoute(builder: (context) => ArchivePage()));
               }),
           SpeedDialChild(
-              child: Icon(Icons.archive_outlined, color: Colors.black),
-              shape: CircleBorder(),
+              child: const Icon(Icons.archive_outlined, color: Colors.black),
+              shape: const CircleBorder(),
               onTap: () {
                 //Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
               }),
           SpeedDialChild(
-              child: Icon(Icons.arrow_back, color: Colors.black),
-              shape: CircleBorder(),
+              child: const Icon(Icons.settings, color: Colors.black),
+              shape: const CircleBorder(),
+              onTap: () {
+                //Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+              }),
+          SpeedDialChild(
+              child: const Icon(Icons.share, color: Colors.black),
+              shape: const CircleBorder(),
+              onTap: () {
+                //Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+              }),
+          /*
+          SpeedDialChild(
+              child: const Icon(Icons.arrow_back, color: Colors.black),
+              shape: const CircleBorder(),
               onTap: () {
                 Navigator.pop(context);
               }),
+
+           */
         ],
       );
   }

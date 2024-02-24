@@ -9,7 +9,7 @@ class MyAppBar extends StatelessWidget{
      toolbarHeight: 100,
      backgroundColor: Colors.grey[100],
        leading: Container(
-         padding: EdgeInsets.all(10),
+         padding: const EdgeInsets.all(10),
          child: Image.asset('assets/images/Logo_vectorized_NoBackground.png'),
          ),
    );
