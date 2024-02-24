@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:my_first_flutter_project/components/product_tile_L.dart';
+import 'package:my_first_flutter_project/components/product_tile.dart';
 import 'package:my_first_flutter_project/models/display.dart';
 import 'package:provider/provider.dart';
 
@@ -60,7 +60,11 @@ class ArchiveState extends State<ArchivePage> {
                   final product = products[index];
 
                   // return Container(color: Colors.black54,);
-                  return ProductTile_L(product: product, width: screenWidth * 2/5,);
+                  return ProductTile(
+                    product: product,
+                    onTap: (){},
+                    width: screenWidth * 2/5,
+                  );
                 },
               ),
             ),
