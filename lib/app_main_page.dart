@@ -1,18 +1,20 @@
-import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:flutter/material.dart';
 import 'package:my_first_flutter_project/screens/0_archive_page.dart';
 import 'package:my_first_flutter_project/screens/1_home_page.dart';
 import 'package:my_first_flutter_project/screens/2_add_page.dart';
 
-// 기본 홈
-class AppPage extends StatefulWidget {
-  const AppPage({super.key});
+// 하단바가 있는 페이지
+// 기본 페이지
+// 홈, 저장소, 추가
+class MyAppPage extends StatefulWidget {
+  const MyAppPage({super.key});
 
   @override
-  State<AppPage> createState() => AppState();
+  State<MyAppPage> createState() => MyAppState();
 }
 
-class AppState extends State<AppPage> {
+class MyAppState extends State<MyAppPage> {
   // 하단바 index
   int _selectedIndex = 1;
 
@@ -31,21 +33,10 @@ class AppState extends State<AppPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // 상단바
-      appBar: AppBar(
-        backgroundColor: Color(0xFFF5F5F5),
-        leading: Container(
-          padding: EdgeInsets.all(10),
-          child: Image.asset('assets/images/Logo_vectorized_NoBackground.png'),
-        ),
-      ),
-
       body: _navIndex.elementAt(_selectedIndex),
-
-      // 하단바
       bottomNavigationBar: CurvedNavigationBar(
-        index: 1,
-        color: Colors.black.withOpacity(0.800000011920929),
+        index: _selectedIndex,
+        color: Colors.black.withOpacity(0.8),
         backgroundColor: Color(0xFFF5F5F5),
         buttonBackgroundColor: Colors.blue,
 
@@ -60,10 +51,10 @@ class AppState extends State<AppPage> {
             Icons.home,
             color: Colors.white,),
           Icon(
-            Icons.add,
+            Icons.add_circle_outlined,
             color: Colors.white,),
         ],
       ),
-    );
+      );
   }
 }

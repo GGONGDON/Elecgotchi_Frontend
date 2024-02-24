@@ -16,42 +16,53 @@ class HomePage extends StatelessWidget{
       // 전체화면 색상
       backgroundColor: Color(0xFFF5F5F5),
 
-      body: ListView(
-        children: [
-          // title
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              'Elecgotchi',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 20,
-                fontWeight: FontWeight.w600,
+        // 상단바
+        appBar: AppBar(
+          backgroundColor: Color(0xFFF5F5F5),
+          leading: Container(
+            padding: EdgeInsets.all(10),
+            child: Image.asset('assets/images/Logo_vectorized_NoBackground.png'),
+          ),
+        ),
+
+      body: Container(
+        height: 600,
+        child: ListView(
+          children: [
+            // title: Elecgotchi
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Elecgotchi',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ),
-          ),
 
-          // product list
-          Center(
-            child: SizedBox(
-              height: 500,
-              child: ListView.builder(
-                itemCount: products.length,
-                scrollDirection: Axis.horizontal,
-                padding: const EdgeInsets.all(15),
-                itemBuilder: (context, index){
-                  // get each individual product_use
-                  final product = products[index];
+            // product list
+            Center(
+              child: SizedBox(
+                height: 500,
+                child: ListView.builder(
+                  itemCount: products.length,
+                  scrollDirection: Axis.horizontal,
+                  padding: const EdgeInsets.all(15),
+                  itemBuilder: (context, index){
+                    // get each individual product_use
+                    final product = products[index];
 
-                  // return as a product tile UI
-                  return ProductTile_L(product: product);
-                },
+                    // return as a product tile UI
+                    return ProductTile_L(product: product);
+                  },
+                ),
               ),
             ),
-          ),
-
-        ],
-      )
+          ],
+        ),
+      ),
     );
   }
 }
