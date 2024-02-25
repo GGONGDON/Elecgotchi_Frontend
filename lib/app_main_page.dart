@@ -37,7 +37,7 @@ class MyAppState extends State<MyAppPage> {
       bottomNavigationBar: CurvedNavigationBar(
         index: _selectedIndex,
         color: Colors.black.withOpacity(0.8),
-        backgroundColor: const Color(0xFFF5F5F5),
+        backgroundColor: Color(0xFFF5F5F5),
         buttonBackgroundColor: Colors.blue,
 
         onTap: _onNavTapped,
