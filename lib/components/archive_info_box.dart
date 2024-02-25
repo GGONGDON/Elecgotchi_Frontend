@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
 class TextBox_2 extends StatefulWidget {
-  final String instruction;
+  final String instruct_up;
+  final String instruct_dis;
 
-  const TextBox_2({Key? key, required this.instruction}) : super(key: key);
+  const TextBox_2({Key? key, required this.instruct_up, required this.instruct_dis}) : super(key: key);
 
   @override
   _TextBox_2State createState() => _TextBox_2State();
 }
 
 class _TextBox_2State extends State<TextBox_2> {
-  String? _selectedOption = 'Select one option!';
+  String? _selectedOption;
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +50,7 @@ class _TextBox_2State extends State<TextBox_2> {
               Row(
                 children: [
                   Radio<String>(
-                    value: 'Upcycling',
+                    value: 'up',
                     groupValue: _selectedOption,
                     onChanged: (value) {
                       setState(() {
@@ -68,7 +69,7 @@ class _TextBox_2State extends State<TextBox_2> {
               Row(
                 children: [
                   Radio<String>(
-                    value: 'Disposal',
+                    value: 'dis',
                     groupValue: _selectedOption,
                     onChanged: (value) {
                       setState(() {
@@ -89,7 +90,8 @@ class _TextBox_2State extends State<TextBox_2> {
 
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text(widget.instruction,
+                child: Text(
+                  _selectedOption == 'up' ? widget.instruct_up : (_selectedOption == 'dis' ? widget.instruct_dis : 'Select an Option!'),
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 14,
