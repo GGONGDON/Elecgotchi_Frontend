@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter_project/components/product_tile.dart';
 import 'package:my_first_flutter_project/models/display_use.dart';
-import 'package:my_first_flutter_project/screens/info_archive_page.dart';
 import 'package:provider/provider.dart';
+
+import 'info_use_page.dart';
 
 class HomePage extends StatelessWidget{
   const HomePage({super.key});
@@ -16,7 +17,7 @@ class HomePage extends StatelessWidget{
     // navigate to selected product details page
     void navigateToProductDetails(int index){
       Navigator.push(context,
-          MaterialPageRoute(builder: (context) => InfoArchivePage(
+          MaterialPageRoute(builder: (context) => InfoUsePage(
               product: products[index],
               index: index,
           ),
