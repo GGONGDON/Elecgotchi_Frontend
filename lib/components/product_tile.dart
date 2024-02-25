@@ -5,13 +5,22 @@ class ProductTile extends StatelessWidget{
 
   final Product product;
   final double width;
+  final double height;
+  final double image_ratio;
+  final double box_size;
+  final double font_size;
   final void Function()? onTap;
 
   const ProductTile({
     super.key,
     required this.product,
-    required this.onTap,
     required this.width,
+    required this.height,
+    required this.image_ratio,
+    required this. box_size,
+    required this. font_size,
+    required this.onTap,
+
   });
 
   @override
@@ -23,35 +32,37 @@ class ProductTile extends StatelessWidget{
           color: Colors.white,
           borderRadius: BorderRadius.circular(12),
         ),
+        width: width,
+        height: height,
         margin: const EdgeInsets.all(10),
         padding: const EdgeInsets.all(25),
-        width: 300,
+
         child: Column(
           children: [
             // product image
             AspectRatio(
-              aspectRatio: 3/4,
+              aspectRatio: image_ratio,
               child: Container(
                 decoration: BoxDecoration(
-                    color: Colors.blue,
+                    color: Colors.transparent,
                     borderRadius: BorderRadius.circular(12)
                 ),
 
                 width: double.infinity,
                 padding: const EdgeInsets.all(25),
-                child: const Icon(Icons.favorite), // 이미지 대신
+                child: Image.asset(product.imagePath), // 이미지 대신
               ),
 
             ),
 
-            const SizedBox(height: 15,),
+            SizedBox(height: box_size),
 
             // product name
             Text(
               product.name,
-              style: const TextStyle(
+              style: TextStyle(
                 color: Colors.black,
-                fontSize: 20,
+                fontSize: font_size,
                 fontWeight: FontWeight.w700,
               ),
             ),

@@ -64,6 +64,10 @@ class ArchiveState extends State<ArchivePage> {
                     product: product,
                     onTap: (){},
                     width: screenWidth * 2/5,
+                    height: 300,
+                    image_ratio: 1,
+                    box_size: 0,
+                    font_size: 10,
                   );
                 },
               ),

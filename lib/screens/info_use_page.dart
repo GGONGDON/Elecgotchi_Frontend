@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:my_first_flutter_project/components/floating_button.dart';
+import 'package:my_first_flutter_project/components/product_tile.dart';
 import 'package:my_first_flutter_project/models/display.dart';
 import 'package:my_first_flutter_project/models/product.dart';
 import 'package:provider/provider.dart';
@@ -8,8 +10,9 @@ import 'package:provider/provider.dart';
 // 2.2 제품 상세 정보_사용중
 class InfoUsePage extends StatefulWidget {
   final Product product;
+  final int index;
 
-  const InfoUsePage({super.key, required this.product});
+  const InfoUsePage({Key? key, required this.product, required this.index}) : super(key: key);
 
   @override
   State<InfoUsePage> createState() => InfoUseState();
@@ -24,12 +27,13 @@ class InfoUseState extends State<InfoUsePage> {
     final products = context.watch<Display>().use;
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       // 전체화면 색상
       backgroundColor: const Color(0xFFF5F5F5),
       floatingActionButton: const FloatButton(),
       appBar: AppBar(
         backgroundColor: Color(0xFFF5F5F5),
-        title: Text(
+        title: const Text(
           'Information',
           style: TextStyle(
             color: Colors.black,
@@ -41,19 +45,31 @@ class InfoUseState extends State<InfoUsePage> {
 
       body: ListView(
         scrollDirection: Axis.vertical,
-        children: const [
+        children: [
           // product details
           Center(
-            // product image + name
+            child: Column(
+              children: <Widget>[
+                // product tile
+                ProductTile(
+                  product: products[widget.index],
+                  width: 300,
+                  height: 340,
+                  image_ratio: 1,
+                  box_size: 15,
+                  font_size: 15,
+                  onTap: () {},
+                ),
 
-            // info button
+                // info button
 
-            // web button
+                // web button
 
-            // memo text field
+                // memo text field
 
-            // care&use text
-
+                // care&use text
+              ],
+            ),
           ),
         ],
       )
