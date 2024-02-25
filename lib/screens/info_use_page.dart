@@ -2,10 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:my_first_flutter_project/components/floating_button.dart';
+import 'package:my_first_flutter_project/components/use_info_box.dart';
 import 'package:my_first_flutter_project/components/my_text_button.dart';
 import 'package:my_first_flutter_project/components/product_tile.dart';
 import 'package:my_first_flutter_project/components/textfield_memo.dart';
-import 'package:my_first_flutter_project/models/display.dart';
+import 'package:my_first_flutter_project/models/display_use.dart';
 import 'package:my_first_flutter_project/models/product.dart';
 import 'package:provider/provider.dart';
 
@@ -75,7 +76,7 @@ class InfoUseState extends State<InfoUsePage> {
                           onTap: (){},
                           text: 'Info',
                           button_color: Color.fromARGB(255, 189, 189, 189),
-                          text_color: Colors.white,
+                          text_color: Colors.black,
                           width: 120,
                           height: 40,
                       ),
@@ -103,9 +104,7 @@ class InfoUseState extends State<InfoUsePage> {
                 ),
 
                 // care&use text
-
-
-
+                TextBox(instruction: 'care & use manual!',),
 
               ],
             ),
