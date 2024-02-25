@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:my_first_flutter_project/components/floating_button.dart';
+import 'package:my_first_flutter_project/components/info_bottom_sheet.dart';
 import 'package:my_first_flutter_project/components/use_info_box.dart';
 import 'package:my_first_flutter_project/components/my_text_button.dart';
 import 'package:my_first_flutter_project/components/product_tile.dart';
@@ -73,7 +74,15 @@ class InfoUseState extends State<InfoUsePage> {
                     children: [
                       // info button
                       MyTextButton(
-                          onTap: (){},
+                          onTap: (){
+                            InfoBottomSheet(context,
+                                ['Registration Date: ${products[widget.index].date}',
+                                  'Certification: ${products[widget.index].certification}',
+                                  'Country of Origin: ${products[widget.index].origin}',
+                                  'Manufacturer: ${products[widget.index].manufacturer}',
+                                  'Contact Number: ${products[widget.index].num}'],
+                                'Close Bottom Sheet');
+                          },
                           text: 'Info',
                           button_color: Color.fromARGB(255, 189, 189, 189),
                           text_color: Colors.black,

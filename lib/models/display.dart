@@ -12,55 +12,89 @@ class Display extends ChangeNotifier {
 
   // products in use
   final List<Product> _use = [
-    // product 1
+
+    Product(
+        name: "LG Refrigerator",
+        imagePath: 'assets/images/LG_dios_object_collection_refrigerator.png',
+        date: DateTime.parse('2024-02-25'),
+        certification: 'certification',
+        origin: 'origin',
+        manufacturer: 'manufacturer',
+        num: 'contact number'
+    ),
+
     Product(
         name: "Galaxy S24 Ultra",
         imagePath: 'assets/images/Galaxy-S24-Ultra.png',
+        date: DateTime.parse('2024-02-25'),
+        certification: 'certification',
+        origin: 'origin',
+        manufacturer: 'manufacturer',
+        num: 'contact number'
     ),
 
-    // product 2
     Product(
       name: "Google Nest Audio",
       imagePath: 'assets/images/google_nest_audio.jpeg',
+        date: DateTime.parse('2024-02-25'),
+        certification: 'certification',
+        origin: 'origin',
+        manufacturer: 'manufacturer',
+        num: 'contact number'
     ),
 
-    // product 3
-    Product(
-      name: "LG Refrigerator",
-      imagePath: 'assets/images/LG_dios_object_collection_refrigerator.png',
-    ),
-
-    // product 4
     Product(
       name: "Lg gram pro",
       imagePath: 'assets/images/Lg_gram_pro_30.6.png',
+        date: DateTime.parse('2024-02-25'),
+        certification: 'certification',
+        origin: 'origin',
+        manufacturer: 'manufacturer',
+        num: 'contact number'
     ),
   ];
 
   // products in archive
   final List<Product> _archive = [
-    // product 1
+
     Product(
       name: "Pixel 8",
       imagePath: 'assets/images/google_pixel_8_mint.png',
+        date: DateTime.parse('2024-02-25'),
+        certification: 'certification',
+        origin: 'origin',
+        manufacturer: 'manufacturer',
+        num: 'contact number'
     ),
 
-    // product 2
     Product(
       name: "Essenza Mini C30 White",
       imagePath: 'assets/images/mini_C30_white_coffee_machine.jpeg',
+        date: DateTime.parse('2024-02-25'),
+        certification: 'certification',
+        origin: 'origin',
+        manufacturer: 'manufacturer',
+        num: 'contact number'
     ),
 
-    // product 3
     Product(
       name: "cube design power strip",
       imagePath: 'assets/images/power_bar_cube_gray.png',
+        date: DateTime.parse('2024-02-25'),
+        certification: 'certification',
+        origin: 'origin',
+        manufacturer: 'manufacturer',
+        num: 'contact number'
     ),
 
-    // product 4
     Product(
       name: "WH-CH720N",
       imagePath: 'assets/images/sony_headphone_white.png',
+        date: DateTime.parse('2024-02-25'),
+        certification: 'certification',
+        origin: 'origin',
+        manufacturer: 'manufacturer',
+        num: 'contact number'
     ),
   ];
 

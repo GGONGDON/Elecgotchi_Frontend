@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:my_first_flutter_project/components/archive_info_box.dart';
 import 'package:my_first_flutter_project/components/floating_button.dart';
+import 'package:my_first_flutter_project/components/info_bottom_sheet.dart';
 import 'package:my_first_flutter_project/components/my_text_button.dart';
 import 'package:my_first_flutter_project/components/product_tile.dart';
 import 'package:my_first_flutter_project/components/textfield_memo.dart';
@@ -62,7 +63,7 @@ class InfoArchiveState extends State<InfoArchivePage> {
                     image_ratio: 1,
                     box_size: 15,
                     font_size: 15,
-                    onTap: () {},
+                    onTap: (){}
                   ),
 
                   // buttons
@@ -73,7 +74,15 @@ class InfoArchiveState extends State<InfoArchivePage> {
                       children: [
                         // info button
                         MyTextButton(
-                          onTap: (){},
+                          onTap: (){
+                            InfoBottomSheet(context,
+                                ['Registration Date: ${products[widget.index].date}',
+                                  'Certification: ${products[widget.index].certification}',
+                                  'Country of Origin: ${products[widget.index].origin}',
+                                  'Manufacturer: ${products[widget.index].manufacturer}',
+                                  'Contact Number: ${products[widget.index].num}'],
+                                'Close Bottom Sheet');
+                          },
                           text: 'Info',
                           button_color: Color.fromARGB(255, 189, 189, 189),
                           text_color: Colors.black,
