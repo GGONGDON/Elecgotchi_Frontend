@@ -16,11 +16,11 @@ class Display extends ChangeNotifier {
     Product(
         name: "Essenza Mini C30 White",
         imagePath: 'assets/images/mini_C30_white_coffee_machine.jpeg',
-        date: DateTime.parse('2024-02-25'),
-        certification: 'certification',
-        origin: 'origin',
-        manufacturer: 'manufacturer',
-        num: 'contact number'
+        date: DateTime.parse('2017-07-01'),
+        certification: 'KC: SW07642-17001,MSIP-REM-FL2-C30',
+        origin: 'Switzerland',
+        manufacturer: 'FLEXTRONICS LLC/업체미제공',
+        num: '080-734-1111'
     ),
 
     Product(

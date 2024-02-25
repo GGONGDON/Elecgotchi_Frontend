@@ -113,7 +113,12 @@ class InfoUseState extends State<InfoUsePage> {
                 ),
 
                 // care&use text
-                TextBox(instruction: 'care & use manual!',),
+                TextBox(
+                  instruction: '1. Clean the drip tray, drip base, and capsule container daily.'
+                      'Also, remove the water tank and lid, wash them with odorless neutral detergent, and then rinse with lukewarm/hot water.\n\n'
+                      '2. Remove moisture using a clean towel, dishcloth, or paper towel, then reinstall all parts. '
+                      'Clean the inside of the machine, including the coffee outlet and capsule container/drip base, with a clean, damp towel. \n',
+                ),
 
               ],
             ),
