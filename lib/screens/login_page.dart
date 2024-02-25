@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter_project/components/button_google.dart';
 import 'package:my_first_flutter_project/components/textfield_1.dart';
-import 'package:my_first_flutter_project/components/wide_black_button.dart';
+import 'package:my_first_flutter_project/components/my_text_button.dart';
 
 class LoginPage extends StatelessWidget{
   LoginPage({super.key});
@@ -52,9 +52,12 @@ class LoginPage extends StatelessWidget{
 
                   const SizedBox(height: 30,),
                   // login button
-                  WideBlackButton(
+                  WideButton(
                       onTap: () => Navigator.pushNamed(context, '/app_main_page.dart' ),
-                      text: 'Log in'
+                      text: 'Log in',
+                      height: 45,
+                      width: 300,
+                      button_color: Colors.black,
                   ),
 
                   const SizedBox(height: 30,),
