@@ -21,7 +21,6 @@ class ArchiveState extends State<ArchivePage> {
     // access in use products
     final products = context.watch<Display>().archive;
     double screenWidth = MediaQuery.of(context).size.width;
-    double screenHight = MediaQuery.of(context).size.height;
 
     // navigate to selected product details page
     void navigateToProductDetails(int index){
@@ -58,11 +57,8 @@ class ArchiveState extends State<ArchivePage> {
                 child:Container(
                   padding: EdgeInsets.fromLTRB(20, 50, 20, 10),
                   color: Colors.transparent,
-                  height: screenHight,
                   child: GridView.count(
                       crossAxisCount: 2,
-                      //mainAxisSpacing: 10,
-                      //crossAxisSpacing: 10,
                       childAspectRatio: 3/4,
                       children: List.generate(
                           products.length,
@@ -71,7 +67,6 @@ class ArchiveState extends State<ArchivePage> {
                               product: products[index],
                               onTap: () => navigateToProductDetails(index),
                               width: screenWidth,
-                              height: screenHight,
                               image_ratio: 1,
                               box_size: 0,
                               font_size: 15,
@@ -81,7 +76,6 @@ class ArchiveState extends State<ArchivePage> {
                   ),
                 )
             ),
-
           ],
         ),
       ),

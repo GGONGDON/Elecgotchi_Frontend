@@ -5,7 +5,6 @@ class ProductTile extends StatelessWidget{
 
   final Product product;
   final double width;
-  final double height;
   final double image_ratio;
   final double box_size;
   final double font_size;
@@ -15,7 +14,6 @@ class ProductTile extends StatelessWidget{
     super.key,
     required this.product,
     required this.width,
-    required this.height,
     required this.image_ratio,
     required this. box_size,
     required this. font_size,
@@ -33,7 +31,6 @@ class ProductTile extends StatelessWidget{
           borderRadius: BorderRadius.circular(12),
         ),
         width: width,
-        height: height,
         margin: const EdgeInsets.all(10),
         padding: const EdgeInsets.all(25),
 
@@ -49,7 +46,7 @@ class ProductTile extends StatelessWidget{
                 ),
 
                 width: double.infinity,
-                padding: const EdgeInsets.all(25),
+                padding: const EdgeInsets.all(20),
                 child: Image.asset(product.imagePath), // 이미지 대신
               ),
 

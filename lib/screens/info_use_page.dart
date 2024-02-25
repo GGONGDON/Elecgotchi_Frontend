@@ -28,6 +28,7 @@ class InfoUseState extends State<InfoUsePage> {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
 
     // access in use products
     final products = context.watch<Display>().use;
@@ -58,8 +59,7 @@ class InfoUseState extends State<InfoUsePage> {
                 // product image & name
                 ProductTile(
                   product: products[widget.index],
-                  width: 300,
-                  height: 340,
+                  width: screenWidth * 0.8,
                   image_ratio: 1,
                   box_size: 15,
                   font_size: 15,
@@ -86,11 +86,11 @@ class InfoUseState extends State<InfoUsePage> {
                           text: 'Info',
                           button_color: Color.fromARGB(255, 189, 189, 189),
                           text_color: Colors.black,
-                          width: 120,
+                          width: screenWidth * 0.35,
                           height: 40,
                       ),
 
-                      SizedBox(width: 50),
+                      SizedBox(width: 30),
 
                       // web button
                       MyTextButton(
@@ -98,7 +98,7 @@ class InfoUseState extends State<InfoUsePage> {
                         text: 'Web',
                         button_color: Color.fromARGB(255, 189, 189, 189),
                         text_color: Colors.black,
-                        width: 120,
+                        width: screenWidth * 0.35,
                         height: 40,
                       ),
                     ],

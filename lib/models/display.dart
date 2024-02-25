@@ -14,8 +14,8 @@ class Display extends ChangeNotifier {
   final List<Product> _use = [
 
     Product(
-        name: "LG Refrigerator",
-        imagePath: 'assets/images/LG_dios_object_collection_refrigerator.png',
+        name: "Essenza Mini C30 White",
+        imagePath: 'assets/images/mini_C30_white_coffee_machine.jpeg',
         date: DateTime.parse('2024-02-25'),
         certification: 'certification',
         origin: 'origin',
@@ -58,18 +58,18 @@ class Display extends ChangeNotifier {
   final List<Product> _archive = [
 
     Product(
-      name: "Pixel 8",
-      imagePath: 'assets/images/google_pixel_8_mint.png',
-        date: DateTime.parse('2024-02-25'),
-        certification: 'certification',
-        origin: 'origin',
-        manufacturer: 'manufacturer',
-        num: 'contact number'
+        name: "LG Refrigerator",
+        imagePath: 'assets/images/LG_dios_object_collection_refrigerator.png',
+        date: DateTime.parse('2023-02-10'),
+        certification: 'EPD international certification',
+        origin: 'Korea',
+        manufacturer: 'LG Electronics Co., Ltd',
+        num: '1544-77777'
     ),
 
     Product(
-      name: "Essenza Mini C30 White",
-      imagePath: 'assets/images/mini_C30_white_coffee_machine.jpeg',
+      name: "Pixel 8",
+      imagePath: 'assets/images/google_pixel_8_mint.png',
         date: DateTime.parse('2024-02-25'),
         certification: 'certification',
         origin: 'origin',

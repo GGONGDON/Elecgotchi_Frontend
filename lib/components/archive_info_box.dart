@@ -15,11 +15,12 @@ class _TextBox_2State extends State<TextBox_2> {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+
     return Padding(
       padding: const EdgeInsets.all(25.0),
       child: Container(
-        width: 300,
-        height: 500,
+        width: screenWidth * 0.8,
         decoration: ShapeDecoration(
             color: Colors.white,
             shape: RoundedRectangleBorder(

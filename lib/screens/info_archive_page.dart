@@ -28,7 +28,7 @@ class InfoArchiveState extends State<InfoArchivePage> {
 
   @override
   Widget build(BuildContext context) {
-
+    double screenWidth = MediaQuery.of(context).size.width;
     // access in use products
     final products = context.watch<Display>().archive;
 
@@ -58,8 +58,7 @@ class InfoArchiveState extends State<InfoArchivePage> {
                   // product image & name
                   ProductTile(
                     product: products[widget.index],
-                    width: 300,
-                    height: 340,
+                    width: screenWidth * 0.8,
                     image_ratio: 1,
                     box_size: 15,
                     font_size: 15,
@@ -86,11 +85,11 @@ class InfoArchiveState extends State<InfoArchivePage> {
                           text: 'Info',
                           button_color: Color.fromARGB(255, 189, 189, 189),
                           text_color: Colors.black,
-                          width: 120,
+                          width: screenWidth * 0.35,
                           height: 40,
                         ),
 
-                        SizedBox(width: 50),
+                        SizedBox(width: 30),
 
                         // web button
                         MyTextButton(
@@ -98,7 +97,7 @@ class InfoArchiveState extends State<InfoArchivePage> {
                           text: 'Web',
                           button_color: Color.fromARGB(255, 189, 189, 189),
                           text_color: Colors.black,
-                          width: 120,
+                          width: screenWidth * 0.35,
                           height: 40,
                         ),
                       ],
@@ -113,11 +112,19 @@ class InfoArchiveState extends State<InfoArchivePage> {
                   ),
 
                   // Disposal Guidance text
+                  // Disposal Guidance text
                   TextBox_2(
-                      instruct_up: 'Upcycling Manual~',
-                      instruct_dis: 'Disposal Manual~',
-                  ),
+                    instruct_up: 'Booking a collection (Circular Governance_Free collection service for government-operated waste appliances): \n'
+                        'https://www.15990903.or.kr/portal/main/main.do \n\n'
+                        'LG Electronics Resource Circulation Program: Chilseo Recycling Center (CRC) \n\n'
+                        'The Rehabilitation Process of Waste Home Appliance: \n'
+                        'https://youtu.be/HpMjZ0CGLl4?si=-IJvlAXpOEMwzwT8 \n',
 
+                    instruct_dis: 'When you bought a new product: \n'
+                        'If you purchase a new product at a LG Electronics product store, we will process the existing product free of charge when delivering the new product. \n\n'
+                        'When you throw away the product you were using: \n'
+                        'When discarding home appliances, you should contact the competent administrative welfare center or the waste home appliance discharge reservation system to dispose of them. \n',
+                  ),
                 ],
               ),
             ),
