@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:my_first_flutter_project/components/floating_button.dart';
 import 'package:my_first_flutter_project/components/my_text_button.dart';
 import 'package:my_first_flutter_project/components/product_tile.dart';
+import 'package:my_first_flutter_project/components/textfield_memo.dart';
 import 'package:my_first_flutter_project/models/display.dart';
 import 'package:my_first_flutter_project/models/product.dart';
 import 'package:provider/provider.dart';
@@ -13,13 +14,15 @@ class InfoUsePage extends StatefulWidget {
   final Product product;
   final int index;
 
-  const InfoUsePage({Key? key, required this.product, required this.index}) : super(key: key);
+  InfoUsePage({Key? key, required this.product, required this.index}) : super(key: key);
 
   @override
   State<InfoUsePage> createState() => InfoUseState();
 }
 
 class InfoUseState extends State<InfoUsePage> {
+  // text editing controller
+  final memoController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +31,6 @@ class InfoUseState extends State<InfoUsePage> {
     final products = context.watch<Display>().use;
 
     return Scaffold(
-      resizeToAvoidBottomInset: false,
       // 전체화면 색상
       backgroundColor: const Color(0xFFF5F5F5),
       floatingActionButton: const FloatButton(),
@@ -94,8 +96,17 @@ class InfoUseState extends State<InfoUsePage> {
                 ),
 
                 // memo text field
+                TextField_Memo_Button(
+                    controller: memoController,
+                    hintText: 'Leave a Memo :)',
+                    obscureText: false,
+                ),
 
                 // care&use text
+
+
+
+
               ],
             ),
           ),

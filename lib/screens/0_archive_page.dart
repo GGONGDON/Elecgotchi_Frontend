@@ -17,6 +17,7 @@ class ArchiveState extends State<ArchivePage> {
   @override
   Widget build(BuildContext context) {
 
+    // access in use products
     final products = context.watch<Display>().use;
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHight = MediaQuery.of(context).size.height;
@@ -24,10 +25,6 @@ class ArchiveState extends State<ArchivePage> {
     return Scaffold(
       // 전체화면 색상
       backgroundColor: Color(0xFFF5F5F5),
-
-      // body: Container(
-      //     color: Colors.black54,
-      //     child: ProductTile_L(product: products[1], width: screenWidth * 2/5,)),
 
       body: SafeArea(
         child: Column(
@@ -44,34 +41,35 @@ class ArchiveState extends State<ArchivePage> {
                 ),
               ),
             ),
-            Container(
-              padding: EdgeInsets.fromLTRB(20, 50, 20, 10),
-              color: CupertinoColors.white,
-              height: screenHight * 5/7,
-              child: GridView.builder(
-                gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                  maxCrossAxisExtent: screenWidth * 5/10,
-                    crossAxisSpacing: 30.0,
-                    mainAxisSpacing: 60.0,
-                ),
-                itemCount: products.length,
-                scrollDirection: Axis.vertical,
-                itemBuilder: (context, index){
-                  final product = products[index];
 
-                  // return Container(color: Colors.black54,);
-                  return ProductTile(
-                    product: product,
-                    onTap: (){},
-                    width: screenWidth * 2/5,
-                    height: 300,
-                    image_ratio: 1,
-                    box_size: 0,
-                    font_size: 10,
-                  );
-                },
-              ),
+            Expanded(
+                child:Container(
+                  padding: EdgeInsets.fromLTRB(20, 50, 20, 10),
+                  color: Colors.transparent,
+                  height: screenHight,
+                  child: GridView.count(
+                      crossAxisCount: 2,
+                      //mainAxisSpacing: 10,
+                      //crossAxisSpacing: 10,
+                      childAspectRatio: 3/4,
+                      children: List.generate(
+                          products.length,
+                              (index){
+                            return ProductTile(
+                              product: products[index],
+                              onTap: (){},
+                              width: screenWidth,
+                              height: screenHight,
+                              image_ratio: 1,
+                              box_size: 0,
+                              font_size: 15,
+                            );
+                          }
+                      )
+                  ),
+                )
             ),
+
           ],
         ),
       ),
