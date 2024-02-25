@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter_project/components/button_google.dart';
-import 'package:my_first_flutter_project/components/textfield_1.dart';
+import 'package:my_first_flutter_project/components/textfield_sign.dart';
 import 'package:my_first_flutter_project/components/my_text_button.dart';
 
 class LoginPage extends StatelessWidget{
@@ -36,7 +36,7 @@ class LoginPage extends StatelessWidget{
 
                   const SizedBox(height: 30,),
                   // id textfield
-                  TextField_Log_Button(
+                  TextField_Sign_Button(
                       controller: usernameController,
                       hintText: 'Email',
                       obscureText: false,
@@ -44,7 +44,7 @@ class LoginPage extends StatelessWidget{
 
                   const SizedBox(height: 15,),
                   // password textfield
-                  TextField_Log_Button(
+                  TextField_Sign_Button(
                     controller: passwordController,
                     hintText: 'Password',
                     obscureText: true,
@@ -52,12 +52,13 @@ class LoginPage extends StatelessWidget{
 
                   const SizedBox(height: 30,),
                   // login button
-                  WideButton(
+                  MyTextButton(
                       onTap: () => Navigator.pushNamed(context, '/app_main_page.dart' ),
                       text: 'Log in',
                       height: 45,
                       width: 300,
                       button_color: Colors.black,
+                      text_color: Colors.white,
                   ),
 
                   const SizedBox(height: 30,),
