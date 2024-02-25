@@ -15,25 +15,25 @@ class Display extends ChangeNotifier {
     // product 1
     Product(
         name: "Product 1",
-        //imagePath: imagePath,
+        imagePath: 'assets/images/Galaxy-S24-Ultra.png',
     ),
 
     // product 2
     Product(
       name: "Product 2",
-      //imagePath: imagePath,
+      imagePath: 'assets/images/google_nest_audio.jpeg',
     ),
 
     // product 3
     Product(
       name: "Product 3",
-      //imagePath: imagePath,
+      imagePath: 'assets/images/LG_dios_object_collection_refrigerator.png',
     ),
 
     // product 4
     Product(
       name: "Product 4",
-      //imagePath: imagePath,
+      imagePath: 'assets/images/Lg_gram_pro_30.6.png',
     ),
   ];
 

@@ -17,7 +17,8 @@ class HomePage extends StatelessWidget{
     void navigateToProductDetails(int index){
       Navigator.push(context,
           MaterialPageRoute(builder: (context) => InfoUsePage(
-            product: products[index],
+              product: products[index],
+              index: index,
           ),
           ),
       );
@@ -53,7 +54,7 @@ class HomePage extends StatelessWidget{
 
             // product list
             Center(
-              child: SizedBox(
+              child: Container(
                 height: 500,
                 child: ListView.builder(
                   itemCount: products.length,
@@ -63,6 +64,10 @@ class HomePage extends StatelessWidget{
                       product: products[index],
                       onTap: () => navigateToProductDetails(index),
                       width: 300,
+                      height: 500,
+                      image_ratio: 3/4,
+                      box_size: 15,
+                      font_size: 20,
                   ),
                 ),
               ),
