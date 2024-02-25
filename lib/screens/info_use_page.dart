@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:my_first_flutter_project/components/floating_button.dart';
+import 'package:my_first_flutter_project/components/my_text_button.dart';
 import 'package:my_first_flutter_project/components/product_tile.dart';
 import 'package:my_first_flutter_project/models/display.dart';
 import 'package:my_first_flutter_project/models/product.dart';
@@ -50,7 +51,7 @@ class InfoUseState extends State<InfoUsePage> {
           Center(
             child: Column(
               children: <Widget>[
-                // product tile
+                // product image & name
                 ProductTile(
                   product: products[widget.index],
                   width: 300,
@@ -61,10 +62,36 @@ class InfoUseState extends State<InfoUsePage> {
                   onTap: () {},
                 ),
 
-                // info button
+                // buttons
+                Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      // info button
+                      MyTextButton(
+                          onTap: (){},
+                          text: 'Info',
+                          button_color: Color.fromARGB(255, 189, 189, 189),
+                          text_color: Colors.white,
+                          width: 120,
+                          height: 40,
+                      ),
 
+                      SizedBox(width: 50),
 
-                // web button
+                      // web button
+                      MyTextButton(
+                        onTap: (){},
+                        text: 'Web',
+                        button_color: Color.fromARGB(255, 189, 189, 189),
+                        text_color: Colors.black,
+                        width: 120,
+                        height: 40,
+                      ),
+                    ],
+                  ),
+                ),
 
                 // memo text field
 

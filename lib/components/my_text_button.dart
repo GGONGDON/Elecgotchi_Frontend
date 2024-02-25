@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 
-class WideButton extends StatelessWidget{
+class MyTextButton extends StatelessWidget{
   final void Function()? onTap;
   final String text;
   final Color button_color;
+  final Color text_color;
   final double width;
   final double height;
 
-  const WideButton({
+  const MyTextButton({
     super.key,
     required this.onTap,
     required this.text,
     required this.button_color,
+    required this.text_color,
     required this.width,
     required this.height,
   });
@@ -37,8 +39,8 @@ class WideButton extends StatelessWidget{
                     child: Center(
                       child: Text(
                         text,
-                        style: const TextStyle(
-                          color: Colors.white,
+                        style: TextStyle(
+                          color: text_color,
                           fontSize: 16,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w400,

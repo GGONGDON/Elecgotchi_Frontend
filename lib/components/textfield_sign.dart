@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class TextField_Log_Button extends StatelessWidget{
+class TextField_Sign_Button extends StatelessWidget{
   final controller;
   final String hintText;
   final bool obscureText;
 
-  const TextField_Log_Button({
+  const TextField_Sign_Button({
     super.key,
     required this.controller,
     required this.hintText,
