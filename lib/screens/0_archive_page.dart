@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:my_first_flutter_project/components/product_tile.dart';
-import 'package:my_first_flutter_project/models/display_use.dart';
+import 'package:my_first_flutter_project/models/display.dart';
 import 'package:my_first_flutter_project/screens/info_archive_page.dart';
 import 'package:provider/provider.dart';
 
@@ -19,7 +19,7 @@ class ArchiveState extends State<ArchivePage> {
   Widget build(BuildContext context) {
 
     // access in use products
-    final products = context.watch<Display>().use;
+    final products = context.watch<Display>().archive;
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHight = MediaQuery.of(context).size.height;
 

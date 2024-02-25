@@ -6,7 +6,7 @@ import 'package:my_first_flutter_project/components/floating_button.dart';
 import 'package:my_first_flutter_project/components/my_text_button.dart';
 import 'package:my_first_flutter_project/components/product_tile.dart';
 import 'package:my_first_flutter_project/components/textfield_memo.dart';
-import 'package:my_first_flutter_project/models/display_use.dart';
+import 'package:my_first_flutter_project/models/display.dart';
 import 'package:my_first_flutter_project/models/product.dart';
 import 'package:provider/provider.dart';
 
@@ -29,7 +29,7 @@ class InfoArchiveState extends State<InfoArchivePage> {
   Widget build(BuildContext context) {
 
     // access in use products
-    final products = context.watch<Display>().use;
+    final products = context.watch<Display>().archive;
 
     return Scaffold(
       // 전체화면 색상
@@ -104,7 +104,10 @@ class InfoArchiveState extends State<InfoArchivePage> {
                   ),
 
                   // Disposal Guidance text
-                  TextBox_2(instruction: 'Disposal manual!',),
+                  TextBox_2(
+                      instruct_up: 'Upcycling Manual~',
+                      instruct_dis: 'Disposal Manual~',
+                  ),
 
                 ],
               ),

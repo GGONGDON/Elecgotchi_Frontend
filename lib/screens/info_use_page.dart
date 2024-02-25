@@ -6,7 +6,7 @@ import 'package:my_first_flutter_project/components/use_info_box.dart';
 import 'package:my_first_flutter_project/components/my_text_button.dart';
 import 'package:my_first_flutter_project/components/product_tile.dart';
 import 'package:my_first_flutter_project/components/textfield_memo.dart';
-import 'package:my_first_flutter_project/models/display_use.dart';
+import 'package:my_first_flutter_project/models/display.dart';
 import 'package:my_first_flutter_project/models/product.dart';
 import 'package:provider/provider.dart';
 

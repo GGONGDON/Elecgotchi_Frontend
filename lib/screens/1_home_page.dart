@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter_project/components/product_tile.dart';
-import 'package:my_first_flutter_project/models/display_use.dart';
+import 'package:my_first_flutter_project/models/display.dart';
 import 'package:provider/provider.dart';
 
 import 'info_use_page.dart';
