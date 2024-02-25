@@ -7,7 +7,7 @@ void InfoBottomSheet(BuildContext context, List<String> messages, String buttonT
       return Container(
         decoration: ShapeDecoration(
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-            color: Colors.amber[200],
+            color: Colors.white,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

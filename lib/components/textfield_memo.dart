@@ -14,20 +14,13 @@ class TextField_Memo_Button extends StatelessWidget{
 
   @override
     Widget build(BuildContext context){
+    double screenWidth = MediaQuery.of(context).size.width;
+
     return Container(
-        width: 300,
+        width: screenWidth * 0.8,
         height: 200,
         decoration: ShapeDecoration(
           color: Colors.white,
-          /*
-          gradient: LinearGradient(
-            colors: [Color(0xFFD9D9D9), Colors.white],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            stops: [0.0, 0.5],
-            tileMode: TileMode.clamp,
-          ),
-           */
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(15)),
           ),

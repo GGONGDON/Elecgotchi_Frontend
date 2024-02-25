@@ -10,6 +10,8 @@ class HomePage extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
 
     // access in use products
     final products = context.watch<Display>().use;
@@ -56,7 +58,7 @@ class HomePage extends StatelessWidget{
             // product list
             Center(
               child: Container(
-                height: 500,
+                height: screenHeight * 0.6,
                 child: ListView.builder(
                   itemCount: products.length,
                   scrollDirection: Axis.horizontal,
@@ -65,7 +67,6 @@ class HomePage extends StatelessWidget{
                       product: products[index],
                       onTap: () => navigateToProductDetails(index),
                       width: 300,
-                      height: 500,
                       image_ratio: 3/4,
                       box_size: 15,
                       font_size: 20,

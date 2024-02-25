@@ -1,17 +1,19 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class TextBox extends StatelessWidget{
   final String instruction;
 
   const TextBox({super.key, required this.instruction});
-  
+
   @override
   Widget build(BuildContext context){
+    double screenWidth = MediaQuery.of(context).size.width;
+
     return Padding(
-      padding: const EdgeInsets.all(25.0),
+      padding: const EdgeInsets.all(20.0),
       child: Container(
-        width: 300,
-        height: 300,
+        width: screenWidth * 0.8,
         decoration: ShapeDecoration(
           color: Colors.white,
           shape: RoundedRectangleBorder(
@@ -20,30 +22,32 @@ class TextBox extends StatelessWidget{
         ),
         child: Padding(
           padding: const EdgeInsets.all(20.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Care & Use',
-                textAlign: TextAlign.start,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Care & Use',
+                  textAlign: TextAlign.start,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w800,
+                  ),
                 ),
-              ),
 
-              SizedBox(height: 10),
+                SizedBox(height: 10),
 
-              Text(instruction,
-                //textAlign: TextAlign.start,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 14,
+                Text(instruction,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 14,
+                  ),
                 ),
-              ),
-            ],
-          ),
+              ],
+            ),
+          )
         ),
       ),
     );
