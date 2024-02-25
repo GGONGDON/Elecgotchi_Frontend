@@ -1,16 +1,40 @@
-# my_first_flutter_project
+# Elecgotchi
 
-A new Flutter project.
 
-## Getting Started
+**Version:** 1.0.0
 
-This project is a starting point for a Flutter application.
+**Developer: [Glenn-Bonsai](https://github.com/GGONGDON/Elecgotchi_Frontend/commits?author=Glenn-Bonsai), [soHyn](https://github.com/soHyn)**
 
-A few resources to get you started if this is your first Flutter project:
+**Description:** Elecgotchi is an electronic product management service that helps users manage and dispose of their electronic devices responsibly
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<br />
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# How To Run
+
+
+### **1. Install Flutter SDK**
+
+- Refer to the official Flutter documentation for detailed installation instructions: https://flutter.dev/docs/get-started/install
+
+### **2. Install an IDE**
+
+- Choose an Integrated Development Environment (IDE) such as Android Studio or VS Code.
+
+### **3. Open and Run the Project in an IDE**
+
+- Open the project in your chosen IDE.
+- Follow the IDE's instructions to run the project.
+
+
+
+<br />
+
+
+# Key Features
+
+
+- Product Registration Features
+- Product Management Guide
+- Product Disposal Guide
+- Product Upcycling Recommendations
+- Product Notepad Features
