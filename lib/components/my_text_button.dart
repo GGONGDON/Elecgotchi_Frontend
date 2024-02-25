@@ -43,7 +43,7 @@ class MyTextButton extends StatelessWidget{
                           color: text_color,
                           fontSize: 16,
                           fontFamily: 'Inter',
-                          fontWeight: FontWeight.w400,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ),

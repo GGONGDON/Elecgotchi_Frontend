@@ -18,6 +18,7 @@ class TextField_Memo_Button extends StatelessWidget{
         width: 300,
         height: 200,
         decoration: ShapeDecoration(
+          color: Colors.white,
           /*
           gradient: LinearGradient(
             colors: [Color(0xFFD9D9D9), Colors.white],
@@ -36,7 +37,7 @@ class TextField_Memo_Button extends StatelessWidget{
           maxLines: null,
           expands: true,
           textAlignVertical: TextAlignVertical.top,
-          style: TextStyle(fontSize: 15, color: Colors.black54),
+          style: TextStyle(fontSize: 16, color: Colors.black54),
           decoration: InputDecoration(
             contentPadding: EdgeInsets.all(12.0),
             prefixIcon: Icon(
