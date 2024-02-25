@@ -63,6 +63,7 @@ class InfoUseState extends State<InfoUsePage> {
 
                 // info button
 
+
                 // web button
 
                 // memo text field

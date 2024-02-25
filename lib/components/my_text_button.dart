@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 
-class WideBlackButton extends StatelessWidget{
+class WideButton extends StatelessWidget{
   final void Function()? onTap;
   final String text;
+  final Color button_color;
+  final double width;
+  final double height;
 
-  const WideBlackButton({
+  const WideButton({
     super.key,
     required this.onTap,
     required this.text,
+    required this.button_color,
+    required this.width,
+    required this.height,
   });
 
   @override
@@ -18,11 +24,11 @@ class WideBlackButton extends StatelessWidget{
             child: Column(
               children: <Widget>[
                 SizedBox(
-                  height: 45,
-                  width: 300,
+                  height: height,
+                  width: width,
                   child: TextButton(
                     style: TextButton.styleFrom(
-                      backgroundColor: Colors.black,
+                      backgroundColor: button_color,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(6),
                       ),
