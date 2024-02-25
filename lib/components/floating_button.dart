@@ -18,25 +18,22 @@ class FloatButton extends StatelessWidget{
 
         children: [
           SpeedDialChild(
+              label: 'delete',
               child: const Icon(Icons.delete_forever, color: Colors.black),
               shape: const CircleBorder(),
               onTap: () {
                 //Navigator.push(context, MaterialPageRoute(builder: (context) => ArchivePage()));
               }),
           SpeedDialChild(
+              label: 'memo',
+              child: const Icon(Icons.library_books, color: Colors.black),
+              shape: const CircleBorder(),
+              onTap: () {
+                //Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+              }),
+          SpeedDialChild(
+              label: 'archive',
               child: const Icon(Icons.archive_outlined, color: Colors.black),
-              shape: const CircleBorder(),
-              onTap: () {
-                //Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
-              }),
-          SpeedDialChild(
-              child: const Icon(Icons.settings, color: Colors.black),
-              shape: const CircleBorder(),
-              onTap: () {
-                //Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
-              }),
-          SpeedDialChild(
-              child: const Icon(Icons.share, color: Colors.black),
               shape: const CircleBorder(),
               onTap: () {
                 //Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
