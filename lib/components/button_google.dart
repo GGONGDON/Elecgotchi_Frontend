@@ -28,7 +28,7 @@ class GoogleButton extends StatelessWidget{
                 children: <Widget>[
                   Center(
                     child: Image.asset(
-                      'assets/images/7dff82097a22ce080aa49aa3352fd7a2.png',
+                      'assets/images/google_logo_1.png',
                       width: 18,
                       height: 18,
                       fit: BoxFit.cover

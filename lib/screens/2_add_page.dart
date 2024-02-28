@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart' hide BoxDecoration, BoxShadow;
 import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
+import 'package:my_first_flutter_project/components/app_bar.dart';
 
 // 2.1 제품 등록 페이지
 class AddPage extends StatefulWidget {
@@ -16,28 +17,19 @@ class AddState extends State<AddPage> {
 
     return Scaffold(
       // 전체화면 색상
-      backgroundColor: const Color(0xFFF5F5F5),
+      backgroundColor: Colors.transparent,
 
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            MyAppBar(text: 'Add Your Product'),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    'Add Your Product',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  /**
-                   * URL 입력박스
-                   */
+                   // URL 입력박스
                   const SizedBox(height: 45.0,),
                   Container(
                     margin: const EdgeInsets.fromLTRB(5, 0, 5, 0),

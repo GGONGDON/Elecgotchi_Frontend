@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter_project/components/app_bar.dart';
 import 'package:my_first_flutter_project/components/product_tile.dart';
 import 'package:my_first_flutter_project/models/display.dart';
 import 'package:provider/provider.dart';
@@ -29,31 +30,12 @@ class HomePage extends StatelessWidget{
 
     return Scaffold(
       // 전체화면 색상
-      backgroundColor: const Color(0xFFF5F5F5),
-
-        // 상단바
-        appBar: AppBar(
-          backgroundColor: const Color(0xFFF5F5F5),
-          leading: Container(
-            padding: const EdgeInsets.all(10),
-            child: Image.asset('assets/images/Logo_vectorized_NoBackground.png'),
-          ),
-        ),
+      backgroundColor: Colors.transparent,
+      appBar: MyAppBar(text: 'Elecgotchi'),
 
       body: ListView(
           children: [
-            // title: Elecgotchi
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                'Elecgotchi',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ),
+            // buttons
 
             // product list
             Center(
@@ -66,9 +48,9 @@ class HomePage extends StatelessWidget{
                   itemBuilder: (context, index) => ProductTile(
                       product: products[index],
                       onTap: () => navigateToProductDetails(index),
-                      width: 300,
-                      image_ratio: 3/4,
-                      box_size: 15,
+                      width: screenWidth * 0.9,
+                      image_ratio: 1,
+                      box_size: screenHeight * 0.05,
                       font_size: 20,
                   ),
                 ),

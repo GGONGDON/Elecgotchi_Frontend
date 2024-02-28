@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class TextBox extends StatelessWidget{
   final String instruction;
 
-  const TextBox({super.key, required this.instruction});
+  const TextBox({super.key ,required this.instruction});
 
   @override
   Widget build(BuildContext context){
@@ -31,7 +31,7 @@ class TextBox extends StatelessWidget{
                   'Care & Use',
                   textAlign: TextAlign.start,
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Theme.of(context).colorScheme.primary,
                     fontSize: 16,
                     fontWeight: FontWeight.w800,
                   ),
@@ -41,7 +41,7 @@ class TextBox extends StatelessWidget{
 
                 Text(instruction,
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Theme.of(context).colorScheme.onPrimary,
                     fontSize: 14,
                   ),
                 ),

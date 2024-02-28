@@ -78,9 +78,9 @@ class _TextBox_2State extends State<TextBox_2> {
                       });
                     },
                   ),
-                  const Text('Disposal',
+                  Text('Disposal',
                     style: TextStyle(
-                      color: Colors.black,
+                      color: Theme.of(context).colorScheme.onPrimary,
                       fontSize: 14,
                     ),
                   ),
@@ -94,7 +94,7 @@ class _TextBox_2State extends State<TextBox_2> {
                 child: Text(
                   _selectedOption == 'up' ? widget.instruct_up : (_selectedOption == 'dis' ? widget.instruct_dis : 'Select an Option!'),
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Theme.of(context).colorScheme.onPrimary,
                     fontSize: 14,
                   ),
                 ),
