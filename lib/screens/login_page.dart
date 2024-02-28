@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter_project/components/button_google.dart';
 import 'package:my_first_flutter_project/components/textfield_sign.dart';
@@ -12,6 +13,8 @@ class LoginPage extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
+    double screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
@@ -19,9 +22,16 @@ class LoginPage extends StatelessWidget{
           child: Center(
             child: Column(
                 children: [
-                  const SizedBox(height: 90,),
+                  const SizedBox(height: 70,),
                   // logo
-                  Image.asset('assets/images/_Elecgotchi_3D logo_xs.png'),
+                  Container(
+                      child: Image.asset(
+                          'assets/images/elecgotchi_logo_sign_3d-removebg-preview.png',
+                        width: screenWidth * 0.3,
+                        height: screenWidth * 0.3,
+                        fit: BoxFit.contain,
+                      ),
+                  ),
 
                   const SizedBox(height: 30,),
                   // Sign in to Elecgotchi

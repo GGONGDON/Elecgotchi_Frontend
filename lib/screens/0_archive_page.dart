@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:my_first_flutter_project/components/app_bar.dart';
 import 'package:my_first_flutter_project/components/product_tile.dart';
 import 'package:my_first_flutter_project/models/display.dart';
 import 'package:my_first_flutter_project/screens/info_archive_page.dart';
@@ -35,29 +36,10 @@ class ArchiveState extends State<ArchivePage> {
 
     return Scaffold(
       // 전체화면 색상
-      backgroundColor: Color(0xFFF5F5F5),
+      backgroundColor: Colors.transparent,
+      appBar: MyAppBar(text: 'Archive'),
 
-      body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Archive',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ),
-
-            Expanded(
-                child:Container(
-                  padding: EdgeInsets.fromLTRB(20, 50, 20, 10),
-                  color: Colors.transparent,
-                  child: GridView.count(
+      body: GridView.count(
                       crossAxisCount: 2,
                       childAspectRatio: 3/4,
                       children: List.generate(
@@ -74,11 +56,6 @@ class ArchiveState extends State<ArchivePage> {
                           }
                       )
                   ),
-                )
-            ),
-          ],
-        ),
-      ),
     );
   }
 }

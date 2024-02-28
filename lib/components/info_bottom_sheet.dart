@@ -5,6 +5,7 @@ void InfoBottomSheet(BuildContext context, List<String> messages, String buttonT
     context: context,
     builder: (BuildContext context) {
       return Container(
+        width: double.infinity,
         decoration: ShapeDecoration(
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             color: Colors.white,

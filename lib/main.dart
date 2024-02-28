@@ -4,6 +4,7 @@ import 'package:my_first_flutter_project/models/display.dart';
 import 'package:my_first_flutter_project/screens/0_archive_page.dart';
 import 'package:my_first_flutter_project/screens/1_home_page.dart';
 import 'package:my_first_flutter_project/screens/2_add_page.dart';
+import 'package:my_first_flutter_project/themes/color_system.dart';
 import 'package:provider/provider.dart';
 import 'screens/login_page.dart';
 
@@ -21,12 +22,14 @@ class MyApp extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
+
     return MaterialApp(
+      theme: nature,
       debugShowCheckedModeBanner: false,
       home: LoginPage(),
       routes: {
         '/login_page.dart': (context) => LoginPage(),
-        '/app_main_page.dart': (context) => const MyAppPage(),
+        '/app_main_page.dart': (context) => MyAppPage(),
         '/1_home_page.dart': (context) => const HomePage(),
         '/2_add_page.dart': (context) => const AddPage(),
         '/0_archive_page.dart': (context) => const ArchivePage(),

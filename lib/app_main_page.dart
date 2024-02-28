@@ -8,7 +8,8 @@ import 'package:my_first_flutter_project/screens/2_add_page.dart';
 // 기본 페이지
 // 홈, 저장소, 추가
 class MyAppPage extends StatefulWidget {
-  const MyAppPage({super.key});
+
+  MyAppPage({super.key});
 
   @override
   State<MyAppPage> createState() => MyAppState();
@@ -33,12 +34,14 @@ class MyAppState extends State<MyAppPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: _navIndex.elementAt(_selectedIndex),
+
       bottomNavigationBar: CurvedNavigationBar(
         index: _selectedIndex,
-        color: Colors.black.withOpacity(0.8),
-        backgroundColor: Color(0xFFF5F5F5),
-        buttonBackgroundColor: Colors.blue,
+        color:Theme.of(context).colorScheme.primary.withOpacity(0.8),
+        backgroundColor: Colors.transparent,
+        buttonBackgroundColor: Theme.of(context).colorScheme.primary,
 
         onTap: _onNavTapped,
 

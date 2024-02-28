@@ -35,16 +35,16 @@ class TextField_Memo_Button extends StatelessWidget{
             contentPadding: EdgeInsets.all(12.0),
             prefixIcon: Icon(
               Icons.edit,
-              color: Colors.black,
+              color: Theme.of(context).colorScheme.primary,
             ),
             hintText: hintText,
-            hintStyle: TextStyle(color: Colors.black54),
+            hintStyle: TextStyle(color: Theme.of(context).colorScheme.secondary),
             focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.blue),
+              borderSide: BorderSide(color: Theme.of(context).colorScheme.secondary),
               borderRadius: BorderRadius.circular(15),
             ),
             enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Color.fromARGB(255, 189, 189, 189)),
+              borderSide: BorderSide(color: Colors.transparent),
               borderRadius: BorderRadius.circular(15),
             ),
           ),

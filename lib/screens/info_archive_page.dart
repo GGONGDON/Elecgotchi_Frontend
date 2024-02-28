@@ -83,7 +83,7 @@ class InfoArchiveState extends State<InfoArchivePage> {
                                 'Close Bottom Sheet');
                           },
                           text: 'Info',
-                          button_color: Color.fromARGB(255, 189, 189, 189),
+                          button_color: Theme.of(context).colorScheme.secondary,
                           text_color: Colors.black,
                           width: screenWidth * 0.35,
                           height: 40,
@@ -95,7 +95,7 @@ class InfoArchiveState extends State<InfoArchivePage> {
                         MyTextButton(
                           onTap: (){},
                           text: 'Web',
-                          button_color: Color.fromARGB(255, 189, 189, 189),
+                          button_color:Theme.of(context).colorScheme.secondary,
                           text_color: Colors.black,
                           width: screenWidth * 0.35,
                           height: 40,
